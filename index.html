@@ -494,7 +494,7 @@
             <h2 class="page-title">测评说明</h2>
             <div class="info-item">
                 <h4>测评时间</h4>
-                <p>约5分钟完成，共15题</p>
+                <p>约10-12分钟完成，共48题</p>
             </div>
             <div class="info-item">
                 <h4>测评方式</h4>
@@ -615,26 +615,59 @@
     <script>
         // ==================== 题库数据 ====================
         const questions = [
-            // 焦虑维度 (A1-A5)
+            // 焦虑维度 (A1-A12)
             { id: 1, text: "当伴侣没有及时回复我的消息时，我会变得焦虑。", dimension: 'anxious', reverse: false },
             { id: 2, text: "我经常担心我们的关系会突然结束。", dimension: 'anxious', reverse: false },
             { id: 3, text: "我需要频繁确认伴侣是否在乎我。", dimension: 'anxious', reverse: false },
             { id: 4, text: "当我们发生争执后，我很难平静下来。", dimension: 'anxious', reverse: false },
             { id: 5, text: "当伴侣想要独处时，我会感到被拒绝。", dimension: 'anxious', reverse: false },
+            { id: 6, text: "我常常担心另一半不爱我了。", dimension: 'anxious', reverse: false },
+            { id: 7, text: "我很担心另一半了解真实的我以后，就不再喜欢我了。", dimension: 'anxious', reverse: false },
+            { id: 8, text: "我在单身状态时会非常焦虑，感觉生活若有所失。", dimension: 'anxious', reverse: false },
+            { id: 9, text: "每当另一半不在身边，我都很害怕对方被别的人吸引。", dimension: 'anxious', reverse: false },
+            { id: 10, text: "我常常担心另一半离我而去以后，我就再也找不到其他人了。", dimension: 'anxious', reverse: false },
+            { id: 11, text: "我常担心自己不够有魅力。", dimension: 'anxious', reverse: false },
+            { id: 12, text: "如果我发现自己喜欢的人却喜欢别人，我会痛苦万分。", dimension: 'anxious', reverse: false },
+            { id: 37, text: "我有时会莫名其妙地对另一半发火。", dimension: 'anxious', reverse: false },
+            { id: 38, text: "我对另一半的情绪十分敏感。", dimension: 'anxious', reverse: false },
+            { id: 39, text: "我在与对方争执时，总会冲动之下说出令我后悔的话。", dimension: 'anxious', reverse: false },
+            { id: 40, text: "每当我与另一半分享感受时，都害怕对方难以感同身受。", dimension: 'anxious', reverse: false },
             
-            // 回避维度 (V1-V5)
-            { id: 6, text: "我更习惯自己处理问题，不太愿意求助伴侣。", dimension: 'avoidant', reverse: false },
-            { id: 7, text: "亲密的关系让我感到脆弱，我倾向于保持距离。", dimension: 'avoidant', reverse: false },
-            { id: 8, text: "我不太喜欢谈论自己的情绪或内心需求。", dimension: 'avoidant', reverse: false },
-            { id: 9, text: "当伴侣需要我的支持和安慰时，我常想先保持距离。", dimension: 'avoidant', reverse: false },
-            { id: 10, text: "承诺和长期关系让我有被束缚的感觉。", dimension: 'avoidant', reverse: false },
+            // 回避维度 (V1-V12)
+            { id: 13, text: "我更习惯自己处理问题，不太愿意求助伴侣。", dimension: 'avoidant', reverse: false },
+            { id: 14, text: "亲密的关系让我感到脆弱，我倾向于保持距离。", dimension: 'avoidant', reverse: false },
+            { id: 15, text: "我不太喜欢谈论自己的情绪或内心需求。", dimension: 'avoidant', reverse: false },
+            { id: 16, text: "当伴侣需要我的支持和安慰时，我常想先保持距离。", dimension: 'avoidant', reverse: false },
+            { id: 17, text: "承诺和长期关系让我有被束缚的感觉。", dimension: 'avoidant', reverse: false },
+            { id: 18, text: "对于我来说，独立性比亲密关系更重要。", dimension: 'avoidant', reverse: false },
+            { id: 19, text: "我不想将内心最深处的感觉分享给另一半。", dimension: 'avoidant', reverse: false },
+            { id: 20, text: "我觉得很难去依靠另一半。", dimension: 'avoidant', reverse: false },
+            { id: 21, text: "另一半离我太近时，我会感觉到焦虑。", dimension: 'avoidant', reverse: false },
+            { id: 22, text: "我的另一半总会提出一些让我觉得过分亲密的请求。", dimension: 'avoidant', reverse: false },
+            { id: 23, text: "不在一起时，我会很想念另一半，然而在一起了又会想逃离。", dimension: 'avoidant', reverse: false },
+            { id: 24, text: "我不喜欢别人依赖我的感觉。", dimension: 'avoidant', reverse: false },
+            { id: 41, text: "比起固定的性伴侣来，我更偏爱与不同人之间的露水情缘。", dimension: 'avoidant', reverse: false },
+            { id: 42, text: "我不善于在恋爱中制造浪漫，有时候别人会觉得我很乏味。", dimension: 'avoidant', reverse: false },
+            { id: 43, text: "如果我发现自己喜欢的人却喜欢别人，我并不会感到很痛苦，会稍微有些嫉妒，不过这种感觉转瞬即逝。", dimension: 'avoidant', reverse: false },
+            { id: 44, text: "如果我发现自己喜欢的人却喜欢别人，我会感觉到解脱——如此一来对方就不会对我产生占有欲。", dimension: 'avoidant', reverse: false },
             
-            // 安全维度 (S1-S5) - 正向题
-            { id: 11, text: "我能够坦然表达自己的需求和界限。", dimension: 'safe', reverse: false },
-            { id: 12, text: "亲密关系让我更有力量，而不是失去自我。", dimension: 'safe', reverse: false },
-            { id: 13, text: "当发生冲突时，我能关注问题本身，而不是人身攻击。", dimension: 'safe', reverse: false },
-            { id: 14, text: "当伴侣没有立即回应时，我能耐心等待，不会过度猜测。", dimension: 'safe', reverse: false },
-            { id: 15, text: "我能在亲密与独立之间保持很好的平衡。", dimension: 'safe', reverse: false }
+            // 安全维度 (S1-S12) - 正向题
+            { id: 25, text: "我能够坦然表达自己的需求和界限。", dimension: 'safe', reverse: false },
+            { id: 26, text: "亲密关系让我更有力量，而不是失去自我。", dimension: 'safe', reverse: false },
+            { id: 27, text: "当发生冲突时，我能关注问题本身，而不是人身攻击。", dimension: 'safe', reverse: false },
+            { id: 28, text: "当伴侣没有立即回应时，我能耐心等待，不会过度猜测。", dimension: 'safe', reverse: false },
+            { id: 29, text: "我能在亲密与独立之间保持很好的平衡。", dimension: 'safe', reverse: false },
+            { id: 30, text: "我很乐意跟另一半分享自己的想法和感受。", dimension: 'safe', reverse: false },
+            { id: 31, text: "与另一半的不愉快，不会令我对我们的关系产生怀疑。", dimension: 'safe', reverse: false },
+            { id: 32, text: "当我与别人意见不一时，能够很从容地表达自己的意见。", dimension: 'safe', reverse: false },
+            { id: 33, text: "我相信大多数人都是诚实可靠的。", dimension: 'safe', reverse: false },
+            { id: 34, text: "我对自己的亲密关系大体满意。", dimension: 'safe', reverse: false },
+            { id: 35, text: "我不觉得在亲密关系中付出过多。", dimension: 'safe', reverse: false },
+            { id: 36, text: "我能很轻易地将自己的需求传达给对方。", dimension: 'safe', reverse: false },
+            { id: 45, text: "我感觉与另一半很容易陷入热恋。", dimension: 'safe', reverse: false },
+            { id: 46, text: "我感觉自己在分手以后很快就能自愈，我都很惊讶，自己怎么能那么快就忘记一个人。", dimension: 'safe', reverse: false },
+            { id: 47, text: "我非常享受依靠另一半的感觉。", dimension: 'safe', reverse: false },
+            { id: 48, text: "我会很快对另一半产生依恋。", dimension: 'safe', reverse: false }
         ];
 
         // 结果内容配置
@@ -848,9 +881,9 @@
             });
 
             // 标准化到0-100分
-            // 每个维度5题，每题1-5分，总分5-25分
+            // 每个维度16题，每题1-5分，总分16-80分
             const normalizeScore = (score) => {
-                return Math.round(((score - 5) / (25 - 5)) * 100);
+                return Math.round(((score - 16) / (80 - 16)) * 100);
             };
 
             const anxiousNormalized = normalizeScore(anxiousScore);
